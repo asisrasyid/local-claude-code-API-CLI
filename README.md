@@ -1,4 +1,4 @@
-# Local Claude Chat — Ruang Diskusi Muhammad Azis
+# Local Claude Chat 
 
 Chat UI lokal berbasis Next.js yang auto-load context dari `context-task/ai/` dan terhubung ke Claude API + SheetMaster. Dijalankan di `localhost:3100` sebagai ruang diskusi personal.
 
