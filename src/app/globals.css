@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+/* ── Font ─────────────────────────────────── */
+@theme inline {
+  --font-jakarta: var(--font-jakarta);
+}
+
+/* ── Palette Variables ────────────────────── */
+/* Light — primary:#F1F6F9  secondary:#14274E  ornamen:#394867 #9BA4B4 */
+:root {
+  --bg:          #F1F6F9;
+  --bg-surface:  #dce6ed;
+  --bg-card:     #ffffff;
+  --accent:      #283349;
+  --primary:     #e3e5e9;
+  --primary-dark:#bbcdf1;
+  --text:        #14274E;
+  --text-muted:  #9BA4B4;
+  --border:      #c8d4dc;
+}
+
+/* Dark — primary:#394867  secondary:#9BA4B4  ornamen:#F1F6F9 #14274E */
+.dark {
+  --bg:          #14274E;
+  --bg-surface:  #1e3460;
+  --bg-card:     #394867;
+  --accent:      #ccd9ee;
+  --primary:     #eff2f8;
+  --primary-dark:#4a6879;
+  --text:        #d8d9da;
+  --text-muted:  #c7d5ec;
+  --border:      #394867;
+}
+
+/* ── Base ─────────────────────────────────── */
+* { box-sizing: border-box; }
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-jakarta, 'Plus Jakarta Sans', sans-serif);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ── Scrollbar ────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 999px; }
+
+/* ── Typing cursor ────────────────────────── */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: var(--accent);
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  border-radius: 2px;
+  animation: blink 0.9s step-end infinite;
+}
